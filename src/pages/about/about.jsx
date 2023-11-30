@@ -1,4 +1,6 @@
 import { Link } from "react-router-dom";
+
+
 import React from "react";
 import "./about.css";
 import category1 from "../../assets/categories/kitchen.jpg"
@@ -18,21 +20,25 @@ import category9 from "../../assets/categories/other.png"
 
 
 
+
 export const About = () => {
   return (
   <>
 
 
 
-  <h1>About</h1>
+  <h1>Categories</h1>
 
 <div className="contain">
 
+
+<Link to={"../kitchen"}>
  <div className="categorybox"> 
  <div><img className="img2" src={category1} /></div>
  <div className="catnme"> Kitchen </div>
- <button> Show more</button>
+ <button > Show more</button>
 </div>
+</Link>
 
 <div className="categorybox"> 
  <div><img className="img2" src={category2} /></div>

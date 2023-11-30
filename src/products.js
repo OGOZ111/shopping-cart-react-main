@@ -6,6 +6,12 @@ import product5 from "./assets/products/5.png";
 import product6 from "./assets/products/6.webp";
 import product7 from "./assets/products/7.webp";
 import product8 from "./assets/products/8.webp";
+import blender from "../src/assets/categories/kitchenpics/blender.avif"
+
+
+
+
+
 
 export const PRODUCTS = [
   {
@@ -56,4 +62,21 @@ export const PRODUCTS = [
     price: 40.0,
     productImage: product8,
   },
+];
+
+
+
+
+
+
+
+
+export const KITCHENPRODUCTS = [
+  {
+    id: 9,
+    productName: "Breville",
+    price: 79.0,
+    productImage: blender,
+  },
+
 ];
