@@ -1,4 +1,4 @@
-import { createContext, useEffect, useState } from "react";
+import React, { createContext, useEffect, useState } from "react";
 import { PRODUCTS } from "../products";
 
 export const ShopContext = createContext(null);
@@ -13,6 +13,8 @@ const getDefaultCart = () => {
 
 export const ShopContextProvider = (props) => {
   const [cartItems, setCartItems] = useState(getDefaultCart());
+  const [selectedCategory, setSelectedCategory] = useState(null);
+  const [filteredProducts, setFilteredProducts] = useState(PRODUCTS);
 
   const getTotalCartAmount = () => {
     let totalAmount = 0;
@@ -41,6 +43,19 @@ export const ShopContextProvider = (props) => {
     setCartItems(getDefaultCart());
   };
 
+  const filterProductsByCategory = () => {
+    if (selectedCategory) {
+      return PRODUCTS.filter(
+        (product) => product.categoryId === selectedCategory
+      );
+    }
+    return PRODUCTS;
+  };
+
+  useEffect(() => {
+    setFilteredProducts(filterProductsByCategory());
+  }, [selectedCategory]);
+
   const contextValue = {
     cartItems,
     addToCart,
@@ -48,6 +63,9 @@ export const ShopContextProvider = (props) => {
     removeFromCart,
     getTotalCartAmount,
     checkout,
+    selectedCategory,
+    setSelectedCategory,
+    filteredProducts,
   };
 
   return (

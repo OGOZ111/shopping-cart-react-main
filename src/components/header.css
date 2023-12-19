@@ -1,0 +1,185 @@
+.header {
+  background-color: rgb(255, 255, 255);
+  width: 100%;
+  height: 70px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  font-family: "Lato", sans-serif;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+}
+/* Header Left Part */
+
+.header_left {
+  /* background-color: lightblue; */
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+.logo {
+  width: 100%;
+  height: 100%;
+  margin-left: 24px;
+  margin-right: 24px;
+  padding-bottom: 5px;
+}
+.header-centerMenu {
+  width: 100%;
+  height: 100%;
+}
+#menu {
+  font-size: 14px;
+  width: 100px;
+  height: 36px;
+  padding: 2px;
+  margin-right: 2px;
+  border-radius: 25px;
+  background-color: #f5f5f5;
+  color: black;
+  border: 1px solid lightgray;
+  box-shadow: inset 1px 2px 3px rgba(0, 0, 0, 0.05);
+}
+.dropdown {
+  height: 10px;
+}
+.dropdown_header {
+  font-size: 14px;
+  display: none;
+  position: absolute;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  min-width: 100px;
+  min-height: 100px;
+  float: left;
+  background-color: white;
+}
+.dropdown_header > a {
+  display: flex;
+  color: black;
+  text-decoration: none;
+  padding: 5px;
+  justify-content: flex-start;
+}
+.dropdown_header > a:hover {
+  background-color: #f5f5f5;
+  color: black;
+}
+.headerMenu:hover > .dropdown_header {
+  display: block;
+}
+/* Header Center Part */
+
+.header_center {
+  /* background-color: lightpink; */
+  display: flex;
+  flex: 1;
+
+  align-items: center;
+  justify-content: center;
+  max-width: 400px;
+}
+
+.searchBar {
+  font-size: 14px;
+  height: 36px;
+  flex: 1;
+  width: 0;
+  padding-left: 12px;
+  background-color: #f5f5f5;
+  color: black;
+  border-radius: 30px;
+  border: 1px solid lightgray;
+  box-shadow: inset 1px 2px 3px rgba(0, 0, 0, 0.05);
+}
+.searchBar::placeholder {
+  font-size: 14px;
+  font-family: "Lato", sans-serif;
+}
+.searchButton {
+  background-color: #f5f5f5;
+  margin-left: -40px;
+  height: 34px;
+  width: 34px;
+  border-radius: 17px; /* If you set the border radius half the heigt and weight, it will make it round */
+  border: none;
+  display: flex;
+  justify-content: center;
+}
+.searchButton:hover {
+  background-color: rgb(240, 238, 238);
+}
+.search-icon {
+  height: 18px;
+}
+
+/* Header Right Part */
+
+.header_right {
+  /* background-color: lightblue; */
+  display: flex;
+  margin-right: 24px;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 160px;
+  flex-shrink: 0;
+}
+.checkout {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  /* border: 1px solid lightgray; */
+  height: 20px;
+  border-radius: 25px;
+  color: black;
+  gap: 10px;
+  padding: 10px;
+  background-color: #f5f5f5;
+}
+.checkout:hover {
+  cursor: pointer;
+}
+.user {
+  height: 20px;
+  width: 20px;
+  border-radius: 50px;
+  margin-left: 4px;
+  padding: 8px;
+  background-color: #f5f5f5;
+  color: black;
+  border: 1px solid lightgray;
+}
+.user:hover {
+  background-color: rgb(240, 238, 238);
+  cursor: pointer;
+}
+.cart1 {
+  height: 25px;
+  width: 25px;
+  padding: 5px;
+  color: black;
+}
+.cart-count1 {
+  position: relative;
+}
+.items-count1 {
+  font-size: 12px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: #e1251b;
+  color: white;
+  padding: 0px 6px 0px 6px;
+  border-radius: 10px;
+}
+.price1 {
+  font-size: 16px;
+  font-weight: 500;
+  margin-right: 4px;
+}
