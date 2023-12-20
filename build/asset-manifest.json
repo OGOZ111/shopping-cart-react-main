@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/static/css/main.7bc7ef3d.css",
+    "main.js": "/static/js/main.c90103d9.js",
+    "static/media/car.jpg": "/static/media/car.8d4b0ba0746b5d74ac30.jpg",
+    "static/media/office.jpg": "/static/media/office.e4e02770174c0c3bfa4e.jpg",
+    "static/media/kitchen.jpg": "/static/media/kitchen.43c3ae4213b4d4ef3be7.jpg",
+    "static/media/seasonal.webp": "/static/media/seasonal.c6d57aca3cf37b2da5c9.webp",
+    "static/media/garden.jpg": "/static/media/garden.f0809cce37881b2772c7.jpg",
+    "static/media/kids.jpg": "/static/media/kids.0a300552631f5f9b95cc.jpg",
+    "static/media/clothing.webp": "/static/media/clothing.32b6818ae9737e18aa07.webp",
+    "static/media/other.png": "/static/media/other.64d45f8ee905f508b0d9.png",
+    "static/media/pets.jpg": "/static/media/pets.10f7e983ed06ee64eb7c.jpg",
+    "index.html": "/index.html",
+    "main.7bc7ef3d.css.map": "/static/css/main.7bc7ef3d.css.map",
+    "main.c90103d9.js.map": "/static/js/main.c90103d9.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.7bc7ef3d.css",
+    "static/js/main.c90103d9.js"
+  ]
+}

@@ -1,4 +1,5 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect } from "react";
+import axios from "axios";
 import { ShopContext } from "../../context/shop-context";
 import { Product } from "./product";
 import "./shop.css";
@@ -19,7 +20,18 @@ const CategorySortButton = ({ categoryId, children }) => {
 };
 
 export const Shop = () => {
-  const { filteredProducts } = useContext(ShopContext);
+  const { filteredProducts, setFilteredProducts } = useContext(ShopContext);
+
+  useEffect(() => {
+    axios
+      .get("https://api.jsonbin.io/v3/b/6583208e1f5677401f110220")
+      .then((response) => {
+        setFilteredProducts(response.data.record);
+      })
+      .catch((error) => {
+        console.error("Error fetching data:", error);
+      });
+  }, [setFilteredProducts]);
 
   return (
     <div className="shop">
@@ -38,9 +50,6 @@ export const Shop = () => {
           <CategorySortButton className="button" categoryId={4}>
             Clothing
           </CategorySortButton>
-          <CategorySortButton className="button" categoryId={5}>
-            Kids
-          </CategorySortButton>
           <CategorySortButton className="button" categoryId={6}>
             Office
           </CategorySortButton>
@@ -49,9 +58,6 @@ export const Shop = () => {
           </CategorySortButton>
           <CategorySortButton className="button" categoryId={8}>
             Seasonal
-          </CategorySortButton>
-          <CategorySortButton className="button" categoryId={9}>
-            Other
           </CategorySortButton>
         </div>
       </div>
